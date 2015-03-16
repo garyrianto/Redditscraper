@@ -11,10 +11,10 @@ import codecs
 BASE_URL = "http://www.reddit.com" #maybe make this into a prompt
 i = 0 #global variable for recursion
 
-filename = raw_input("Enter your filename (do not enter file extension): ")
+filename = raw_input("ebola")
 filename = filename + '.csv'
 
-limit = int(raw_input("Enter the number of pages you want to analyze (MAX 50): "))
+limit = int(raw_input(50))
 
 path_to_script_dir = os.path.dirname(os.path.abspath("webcrawl.py"))  #create a new file no matter what
 #newpath = path_to_script_dir + r'\\' + 'intjpages.csv'  #MAKE PROMPT SO NOT ALWAYS intgpages.csv
@@ -57,7 +57,7 @@ def webcrawler(startingurl):
         webcrawler(next_url)  #recursion
 
 
-site = raw_input("Enter subreddit you want to analyze (case matters!): ")
+site = raw_input("ebola")
 webcrawler("http://www.reddit.com/r/" + str(site))  #run with starting link. need to make into PROMPT
 #"http://www.reddit.com/r/intj"
 
